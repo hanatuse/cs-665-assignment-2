@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The type Shop test.
+ */
 public class ShopTest {
 
     private Shop shop;
@@ -19,6 +22,9 @@ public class ShopTest {
     private Driver scooterDriver1;
     private Driver scooterDriver2;
 
+    /**
+     * Sets up.
+     */
     @BeforeEach
     public void setUp() {
         // Create a new shop instance before each test
@@ -39,6 +45,9 @@ public class ShopTest {
         shop.addDriver(scooterDriver2);
     }
 
+    /**
+     * Test broadcast to all drivers.
+     */
     @Test
     public void testBroadcastToAllDrivers() {
         // Small delivery request (5kg), should be assigned to scooter driver 2 (since it's the smallest available capacity)
@@ -53,6 +62,9 @@ public class ShopTest {
         assertEquals(DriverStatus.AVAILABLE, vanDriver1.getStatus(), "Van driver 1 should remain available.");
     }
 
+    /**
+     * Test van driver assigned heavy delivery.
+     */
     @Test
     public void testVanDriverAssignedHeavyDelivery() {
         // Heavy delivery request (800kg), should be assigned to van driver 1 since only vans can carry this weight
@@ -67,6 +79,9 @@ public class ShopTest {
         assertEquals(DriverStatus.AVAILABLE, taxiDriver.getStatus(), "Taxi driver should remain available.");
     }
 
+    /**
+     * Test no driver available for heavy delivery.
+     */
     @Test
     public void testNoDriverAvailableForHeavyDelivery() {
         // Delivery request that's too heavy for any driver (1500kg)
@@ -82,6 +97,9 @@ public class ShopTest {
         assertEquals(DriverStatus.AVAILABLE, taxiDriver.getStatus(), "Taxi driver should remain available.");
     }
 
+    /**
+     * Test multiple requests.
+     */
     @Test
     public void testMultipleRequests() {
         // First request (10kg), should be assigned to scooter driver 2 (smallest capacity that can handle it)
@@ -100,6 +118,9 @@ public class ShopTest {
         assertEquals(DriverStatus.BUSY, vanDriver1.getStatus(), "Van driver 1 should be assigned.");
     }
 
+    /**
+     * Test driver status reset.
+     */
     @Test
     public void testDriverStatusReset() {
         // Create a delivery request and assign it to scooter driver 2

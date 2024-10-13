@@ -5,6 +5,11 @@ import edu.bu.met.cs665.delivery.driver.TaxiDriver;
 import edu.bu.met.cs665.delivery.driver.ScooterDriver;
 import edu.bu.met.cs665.delivery.driver.Driver;
 
+/**
+ * The entry point of application.
+ *
+ * @author yingtongzhou
+ */
 public class Main {
     public static void main(String[] args) {
         // Create a shop

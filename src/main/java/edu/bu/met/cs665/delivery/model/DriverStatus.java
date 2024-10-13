@@ -1,6 +1,1 @@
-package edu.bu.met.cs665.delivery.model;
-
-public enum DriverStatus {
-    AVAILABLE,
-    BUSY
-}
+package edu.bu.met.cs665.delivery.model;/** * The status of the driver (available, busy, etc.) * * @author yingtongzhou */public enum DriverStatus {    AVAILABLE,    BUSY}

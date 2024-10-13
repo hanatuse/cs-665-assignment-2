@@ -1,14 +1,1 @@
-package edu.bu.met.cs665.delivery.driver;
-
-import edu.bu.met.cs665.delivery.DeliveryRequest;
-import edu.bu.met.cs665.delivery.model.DriverStatus;
-import edu.bu.met.cs665.delivery.model.VehicleType;
-
-public interface Driver {
-    void notify(DeliveryRequest request);
-    String getName();
-    VehicleType getVehicleType();
-    DriverStatus getStatus();
-    void setStatus(DriverStatus status);
-    double getMaxWeight(); // Getter for the max weight
-}
+package edu.bu.met.cs665.delivery.driver;import edu.bu.met.cs665.delivery.DeliveryRequest;import edu.bu.met.cs665.delivery.model.DriverStatus;import edu.bu.met.cs665.delivery.model.VehicleType;/** * The Driver interface. * * @author yingtongzhou */public interface Driver {    /**     * Notify the driver when this is a new request     *     * @param request the request     */    void notify(DeliveryRequest request);    String getName();    VehicleType getVehicleType();    DriverStatus getStatus();    void setStatus(DriverStatus status);    double getMaxWeight(); // Getter for the max weight}

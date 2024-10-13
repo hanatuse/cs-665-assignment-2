@@ -6,19 +6,39 @@ import edu.bu.met.cs665.delivery.model.DriverStatus;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The process of shop and delivery
+ *
+ * @author yingtongzhou
+ */
 public class Shop {
     private String name;
     private List<Driver> drivers;
 
+    /**
+     * Instantiates a new Shop process.
+     *
+     * @param name the name
+     */
     public Shop(String name) {
         this.name = name;
         this.drivers = new ArrayList<>();
     }
 
+    /**
+     * Add a driver.
+     *
+     * @param driver the driver
+     */
     public void addDriver(Driver driver) {
         drivers.add(driver);
     }
 
+    /**
+     * Broadcast delivery request.
+     *
+     * @param request the request
+     */
     public void broadcastDeliveryRequest(DeliveryRequest request) {
         Driver assignedDriver = null;
 
